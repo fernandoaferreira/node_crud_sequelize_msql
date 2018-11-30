@@ -1,0 +1,21 @@
+extends ./layout/main
+
+block content
+    h1(class="text-center") #{msg}
+
+    table(class="table table-responsive")
+        thead
+            tr  
+                th #
+                th Event Name
+                th Event Desc
+                th Action
+        tbody
+            each event in events
+                tr
+                    td= event.id
+                    td= event.nome
+                    td= event.description
+                    td 
+                        a(href=`/events/event/${event.id}` class="btn btn-info") More
+                

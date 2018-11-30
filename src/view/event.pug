@@ -1,0 +1,11 @@
+extends ./layout/main
+
+block content
+    h1(class="text-center") #{msg}
+
+    ul
+        li= event.id 
+        li= event.name
+        li= event.description
+
+    a(href="/events/" class="btn btn-info") Voltar
